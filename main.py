@@ -18,3 +18,6 @@ class Meta:
 
 
 User.create_table
+
+
+class Student(Model)
