@@ -20,4 +20,14 @@ class Meta:
 User.create_table
 
 
-class Student(Model)
+class Student(Model):
+    name = CharField()
+    Id = CharField(unique=True)
+    student_class = CharField()
+
+
+class Meta:
+    database = db
+
+
+Student.create_table
