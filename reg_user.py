@@ -1,5 +1,6 @@
 from main import User
 
+# noinspection PyBroadException
 try:
     user_name = input("Enter your Name \n")
     user_email = input("Enter your Email \n")
@@ -9,5 +10,7 @@ try:
     print("user Created Successfully")
 
 
-except:
-    print("Fail to Create Use a different email")
+
+
+finally:
+    print("Unsuccessfully")

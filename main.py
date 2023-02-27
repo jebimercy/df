@@ -9,7 +9,7 @@ db = SqliteDatabase(path.join(connection, "PreeChia.db"))
 # creating table
 class User(Model):
     name = CharField()
-    email = CharField(unique=True)
+    email = CharField()
     password = CharField()
 
 
@@ -17,17 +17,34 @@ class Meta:
     database = db
 
 
-User.create_table
+User.create_table()
 
 
 class Student(Model):
     name = CharField()
-    Id = CharField(unique=True)
-    student_class = CharField()
+    Id = CharField()
+    room = CharField()
 
 
 class Meta:
     database = db
 
 
-Student.create_table
+Student.create_table()
+
+
+class People(Model):
+    name = CharField()
+    phone = CharField()
+    email = CharField()
+    password = CharField()
+    gender = CharField()
+    religion = CharField()
+    county = CharField()
+
+
+class Meta:
+    database = db
+
+
+People.create_table()
